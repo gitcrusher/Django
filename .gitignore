@@ -1,0 +1,13 @@
+django_env/
+.qodo/
+
+
+__pycache__/
+*.py[cod]
+
+
+
+db.sqlite3
+.env
+
+.vscode/
