@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import home, about, contact
+from home.views import home, about, contact, dynamic_url
 
 from first_project.views import hello_geeks
 
@@ -24,6 +24,7 @@ from first_project.views import hello_geeks
 
 urlpatterns = [
     path('', home, name = "home"),
+    path('<id>', dynamic_url, name ="dynamic_url"),
     path('about-Us/', about, name = "about"),
     path('contact/', contact, name = "contact"),
     path('geek/', hello_geeks),
