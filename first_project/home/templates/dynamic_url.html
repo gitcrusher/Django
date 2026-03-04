@@ -8,9 +8,12 @@
 <body>
     <h1>Dynamic url</h1>
     <p>
-        this is Dynamic url page 
+        this is Dynamic url page :
 
     </p>
+    {{name}}
+
+    <p>Dynamic url id:{{id}}</p>
 
     <a href="{% url 'home' %}">Home</a> | 
     <a href="{% url 'about' %}">About</a>

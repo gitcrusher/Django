@@ -13,6 +13,6 @@ def about(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def dynamic_url(request,id):
+def dynamic_url(request,id,name):
     print(f"the id we got for dynamic url id -> {id}")
-    return render(request, 'dynamic_url.html')
+    return render(request, 'dynamic_url.html', context = {"id":id, "name": name})
