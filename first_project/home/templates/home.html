@@ -28,6 +28,14 @@
     {% endif %}
 
     <hr>
+
+    <h3>City information</h3>
+    <p>S.no | Name | Population | Country </p>
+    {% for city in cities%}
+    <p>{{forloop.counter}} | {{city.Name}} | {{city.Population}} | {{city.Country}} </p>
+    {%endfor%}
+
+    <hr>
     <a href="{% url 'contact' %}">Contact</a> |
     <!-- <a href="/about">About</a> -->
     <a href="{% url 'about' %}">About</a>

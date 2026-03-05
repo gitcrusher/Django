@@ -10,7 +10,14 @@ def home(request):
 
     vegetables = ["tomato🍅", "potato🥔", "cucumber🥒", "onion🧅", "carrot🥕"]
     person_age = 15
-    context = {"lucky_number": lucky_number,"vegetables": vegetables, "person_age": person_age}
+    cities  = [
+        {"Name": "New York", "Population": 8000000, "Country": "USA"},
+        {"Name": "Tokyo", "Population": 14000000, "Country": "Japan"},
+        {"Name": "Paris", "Population": 2000000, "Country": "France"},
+        {"Name": "London", "Population": 9000000, "Country": "UK"}
+    ]
+
+    context = {"lucky_number": lucky_number,"vegetables": vegetables, "person_age": person_age, "cities": cities}
     return render(request, 'home.html', context)
 
 def about(request):
