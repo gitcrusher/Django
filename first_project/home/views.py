@@ -7,7 +7,10 @@ import random
 def home(request):
     #return HttpResponse("hello frome home")
     lucky_number = random .randint(100,999)
-    context = {"lucky_number": lucky_number}
+
+    vegetables = ["tomato🍅", "potato🥔", "cucumber🥒", "onion🧅", "carrot🥕"]
+    
+    context = {"lucky_number": lucky_number,"vegetables": vegetables}
     return render(request, 'home.html', context)
 
 def about(request):
