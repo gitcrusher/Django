@@ -24,7 +24,7 @@ from first_project.views import hello_geeks
 
 urlpatterns = [
     path('', home, name = "home"),
-    path('<id>/<name>/', dynamic_url, name ="dynamic_url"),
+    path('<int:id>/<name>/', dynamic_url, name ="dynamic_url"),
     path('about-Us/', about, name = "about"),
     path('contact/', contact, name = "contact"),
     path('geek/', hello_geeks),
