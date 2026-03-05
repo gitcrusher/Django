@@ -9,8 +9,8 @@ def home(request):
     lucky_number = random .randint(100,999)
 
     vegetables = ["tomato🍅", "potato🥔", "cucumber🥒", "onion🧅", "carrot🥕"]
-    
-    context = {"lucky_number": lucky_number,"vegetables": vegetables}
+    person_age = 15
+    context = {"lucky_number": lucky_number,"vegetables": vegetables, "person_age": person_age}
     return render(request, 'home.html', context)
 
 def about(request):
