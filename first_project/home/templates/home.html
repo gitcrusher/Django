@@ -2,13 +2,15 @@
 
 {% block start %}
 
-{%include "image.html"%}
+<div class = "container p-4">   
+    {%include "image.html"%}
+
     <h1>Home</h1>
     <p>
         this is home page 
 
     </p>
-    <h2>your lucky number is: {{ lucky_number }}</h2>
+    <h2>your lucky number is: <button class="btn btn-danger">{{ lucky_number }}</button> </h2>
 
     <ul>
         {% for vegetable in vegetables %}
@@ -37,5 +39,5 @@
     <!-- <a href="/about">About</a> -->
     <a href="{% url 'about' %}">About</a>
 
-    
+</div>
 {% endblock %}
