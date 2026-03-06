@@ -29,3 +29,8 @@ def contact(request):
 def dynamic_url(request,id,name):
     print(f"the id we got for dynamic url id -> {id}")
     return render(request, 'dynamic_url.html', context = {"id":id, "name": name})
+
+def project(request):
+    lucky_number = random .randint(100,999)
+    context = {"lucky_number": lucky_number}
+    return render(request, 'project/project.html',context)
