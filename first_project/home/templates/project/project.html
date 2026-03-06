@@ -1,5 +1,47 @@
 {% extends "base.html" %}
 
 {% block start %}
+    <div class="container mt-5">
+        <h2 class="text-center">Guess the lucky number 🎲</h2>
 
+        <form action="#">
+            <div class="form-group col-md-5 mx-auto">
+                <label>Hope you win !</label>
+                <input class="form-control mt-2" id="input" placeholder="Guess the number">
+                <div class="text-center mt-4">
+                    <button class="btn btn-success mt-2" type="button" onclick="checkLuck()">Done</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <p>{{ lucky_number}}</p>
+    <script>
+        var lucky_number = "{{ lucky_number }}"
+        var count = 3
+        function checkLuck(){
+            var input = document.getElementById("input")
+            if(input.value==""){
+                alert("input can not be empty")
+            }
+            if(count<=0){
+                alert("exhausted tries, better luck next time!")
+                return
+            }
+            count-=1 
+            if(input.value == lucky_number){
+                alert("Congratulations! You guessed the lucky number!");
+                window.location.reload();
+                return
+            } else if(lucky_number>input.value) {
+                alert(`try smaller number ${count}`);
+                input.value = ""
+                return
+            }else if(lucky_number<input.value) {
+                alert(`try larger number ${count}`);
+                input.value = ""
+                return
+            }
+        }
+
+    </script>
 {% endblock %}

@@ -31,6 +31,6 @@ def dynamic_url(request,id,name):
     return render(request, 'dynamic_url.html', context = {"id":id, "name": name})
 
 def project(request):
-    lucky_number = random .randint(100,999)
+    lucky_number = random .randint(0,99)
     context = {"lucky_number": lucky_number}
     return render(request, 'project/project.html',context)
